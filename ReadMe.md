@@ -1,4 +1,4 @@
-# Coding Challenge
+# Compression
 
 This program performs compression and decompression/extraction. There is flexibility to pass maximum size during compression. For example,
 if user want to compress file or directory and provided the max size 10MB and if file size is more than provided max size then
@@ -24,29 +24,29 @@ To build an executable jar:
 ### Usage
 For compression :
 
-``` java -jar Application.jar inputDirectory outputDirectory maxFileSizeInMB [compression_algorithm]```
+``` java -jar compression.jar inputDirectory outputDirectory maxFileSizeInMB [compression_algorithm]```
 
 Note: `[compression_algorithm]` is an optional argument. By default, application using `ZIP` algorithm. For other than
 `ZIP` algorithm system will throw an exception.
 
 Example : 
 
-``` java -jar Application.jar src/test/resources/data src/test/resources/compressed/ 5.0 ```
+``` java -jar compression.jar src/test/resources/data src/test/resources/compressed/ 5.0 ```
 
 For decompression/extraction :
 
-``` java -jar Application.jar inputDirectory outputDirectory ```
+``` java -jar compression.jar inputDirectory outputDirectory ```
 
 Example :
 
-``` java -jar Application.jar src/test/resources/compressed/ src/test/resources/decompressed/ ```
+``` java -jar compression.jar src/test/resources/compressed/ src/test/resources/decompressed/ ```
 
 For validation after decompression:
-``` java -jar Application.jar originalWithoutCompressionDirectory compressedOutputDirectory validate ```
+``` java -jar compression.jar originalWithoutCompressionDirectory compressedOutputDirectory validate ```
 
 Example :
 
-``` java -jar Application.jar src/test/resources/data/ src/test/resources/decompressed/ ``` 
+``` java -jar compression.jar src/test/resources/data/ src/test/resources/decompressed/ ``` 
  
 ### Implementation details
 
@@ -72,6 +72,6 @@ To enable new algorithms,
 
   Example :
   
-``` java -jar Application.jar src/test/resources/testData src/test/resources/compressedTestDir/ 5.0 <compression_algorithm>```
+``` java -jar compression.jar src/test/resources/testData src/test/resources/compressedTestDir/ 5.0 <compression_algorithm>```
 
 - For Developer, we have to provide implementation to support new compression algorithm.

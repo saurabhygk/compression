@@ -50,7 +50,7 @@
                         <descriptorRefs>
                             <descriptorRef>jar-with-dependencies</descriptorRef>
                         </descriptorRefs>
-                        <finalName>Application</finalName>
+                        <finalName>compression</finalName>
                         <appendAssemblyId>false</appendAssemblyId>
                         <archive>
                             <manifest>
